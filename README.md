@@ -35,7 +35,24 @@ A **voice-activated personal assistant** designed to make your daily life easier
 
 4. **Text-to-Speech:**  
    - Responds audibly using the `pyttsx3` library.
+## About `training_data.json`
 
+The `training_data.json` file contains labeled data used to train the assistant's intent classifier. Each entry consists of:
+
+- **Text:** The user input (e.g., "set an alarm for 9 PM tomorrow").
+- **Intent:** The categorized task or action (e.g., `set_alarm`).
+
+This file is crucial for training the Naive Bayes Classifier, which helps the assistant understand and classify user commands accurately.
+
+Example of `training_data.json`:
+```
+[
+    {"text": "set an alarm for 9 PM tomorrow", "intent": "set_alarm"},
+    {"text": "what's the weather like in Tokyo?", "intent": "get_weather"},
+    {"text": "send an email to Jane about the meeting", "intent": "send_email"}
+]
+```
+You can extend this file to include more commands and intents for better functionality.
 ---
 
 ## 🎯 Benefits
